@@ -1,0 +1,33 @@
+{
+  "name": "ead-api",
+  "version": "0.0.1",
+  "description": "API da plataforma de ensino a distância",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarceloShirayama/ead-api.git"
+  },
+  "keywords": [
+    "EAD",
+    "API"
+  ],
+  "author": "Marcelo Shirayama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarceloShirayama/ead-api/issues"
+  },
+  "homepage": "https://github.com/MarceloShirayama/ead-api#readme",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.1.2"
+  }
+}
