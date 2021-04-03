@@ -1,12 +1,9 @@
 /* eslint-disable no-console */
-const Hapi = require('@hapi/hapi');
-
-const port = 3000;
-const host = 'localhost';
+require('dotenv').config();
+const server = require('./server');
+require('./services/mongo.services');
 
 const init = async () => {
-  const server = Hapi.server({ port, host });
-
   server.route({
     method: 'GET',
     path: '/',
