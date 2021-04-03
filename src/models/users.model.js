@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // eslint-disable-next-line import/no-unresolved
-const uuidv4 = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 
 const { Schema } = mongoose;
 
@@ -18,15 +18,16 @@ const UserSchema = new Schema({
   password: String,
   address: {
     street: String,
+    number: String,
     complement: String,
     country: String,
     state: String,
     city: String,
     zipcode: String,
-    number: String,
   },
 }, {
   timestamps: {},
 });
 
-module.exports = new mongoose.Model('User', UserSchema);
+// eslint-disable-next-line new-cap
+module.exports = new mongoose.model('User', UserSchema);

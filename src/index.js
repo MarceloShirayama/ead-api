@@ -1,14 +1,12 @@
 /* eslint-disable no-console */
 require('dotenv').config();
 const server = require('./server');
+const routes = require('./routes');
+
 require('./services/mongo.services');
 
 const init = async () => {
-  server.route({
-    method: 'GET',
-    path: '/',
-    handler: (request, h) => '<h1>Olá Pessoal!</h1>',
-  });
+  server.route(routes);
 
   await server.start();
   console.log('Server running on %s', server.info.uri);
