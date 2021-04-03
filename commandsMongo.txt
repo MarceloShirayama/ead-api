@@ -1,0 +1,17 @@
+docker exec -it mongo /bin/bash
+
+mongo -u root -p example
+
+show databases;
+
+use eadapi;
+
+db.createUser(
+  {
+    user: "ead_api_user",
+    pwd: "ead_api_user",
+    roles: ["readWrite"]
+  }
+)
+
+show users;

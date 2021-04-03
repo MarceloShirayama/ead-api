@@ -30,7 +30,7 @@ services:
       - backend
   
   api:
-    image: node:10.16-slim
+    image: node:slim
     container_name: api
     ports: 
       - "3000:3000"
