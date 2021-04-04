@@ -12,4 +12,9 @@ module.exports = [
       },
     },
   },
+  {
+    method: 'GET',
+    path: '/users',
+    handler: (req, h) => [],
+  },
 ];
