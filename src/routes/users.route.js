@@ -1,5 +1,5 @@
 const userHandle = require('../handlers/users.handler');
-const UserSchema = require('../schemas/users.schema');
+const userSchema = require('../schemas/users.schema');
 
 module.exports = [
   {
@@ -8,7 +8,7 @@ module.exports = [
     handler: userHandle.create,
     options: {
       validate: {
-        payload: UserSchema,
+        payload: userSchema,
       },
     },
   },
